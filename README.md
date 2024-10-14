@@ -48,6 +48,38 @@ We are continuously working on improving the organization and identification of 
 
 Each champion folder is named with its key (matching the "key" attribute from the champion data), and skin files within are numbered from 0 to n, where n is the last skin for that champion.
 
+## Injecting
+
+You can use cslol-tools to inject the file into the client. There's a compiled version here:
+https://github.com/LeagueToolkit/cslol-manager/releases
+
+## .fantome File Structure
+
+Understanding the internal structure of a .fantome file is crucial for proper mod creation:
+
+```
+ModName.fantome
+├── RAW/           # For porting legacy mods - avoid for new mods
+│   └── (Legacy mod files, if any)
+├── WAD/           # Main folder for mod files, mirrors LoL's structure
+│   ├── DATA/      # Game data files
+│   ├── Assets/    # Asset files (textures, models, etc.)
+│   └── (Other LoL directories as needed)
+└── META/          # Mod metadata
+    ├── info.json  # Required: Contains mod info (name, author, version, etc.)
+    └── image.png  # Optional: Preview image for the mod
+```
+
+Key points to remember:
+
+1. The .fantome file is a renamed ZIP archive with a specific internal structure.
+2. It must contain the standard folders: RAW (for legacy content), WAD (for main mod files), and META (for metadata).
+3. The WAD folder should mirror League of Legends' file structure precisely for proper mod installation.
+4. The META folder must include an info.json file with basic mod information such as name, author, and version.
+5. Modern mods should primarily use the WAD folder structure for optimal performance and file size.
+6. The RAW folder is mainly for backwards compatibility and should be avoided for new mods unless absolutely necessary.
+
+
 ## API Endpoints
 
 To get champion and skin names, you can use the following Data Dragon API endpoints:
