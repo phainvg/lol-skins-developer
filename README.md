@@ -31,7 +31,7 @@ The repository is organized as follows:
 You will probably notice that there are more .fantome files in each champion folder than the actual number of skins for that champion. This is because the files include both skins and chromas, which we currently cannot reliably differentiate from which skin the chromas is. The reasons for this are:
 
 1. Riot Games does not follow a consistent pattern in assigning IDs to skins and chromas.
-2. The gap between skin IDs is not uniform and cannot be used to reliably identify chromas colors or from which skin they're.
+2. The gap between skin IDs is not uniform and cannot be used to reliably identify chromas colors or from which skin they are.
 
 For example:
 - A champion might have a skin with ID 3 that has 6 chromas.
