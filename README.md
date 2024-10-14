@@ -98,6 +98,19 @@ The use of these assets for skin hack development may violate Riot Games' terms 
 
 This repository is not affiliated with the moderators of r/LoLCustom.
 
+## Security Considerations for Developers
+
+**Important**: Developers utilizing this repository should be aware of potential risks associated with direct use of these files. To mitigate the risk of Riot Games identifying and potentially blacklisting specific file hashes, we strongly recommend implementing a tool or process to alter the hash of each injection before use. This practice can help prevent easy detection and blacklisting of the files provided here.
+
+Consider developing or using a tool that:
+1. Reads the .fantome files from this repository
+2. Makes minor, non-functional alterations to the file content (e.g., adding benign metadata or comments)
+3. Generates a new file with a different hash but identical functionality
+
+By implementing such a system, you can help protect users of your development from potential bans or other consequences, should Riot Games decide to take action against the use of these specific file hashes. Remember, the goal is to preserve functionality while avoiding direct matches to the files in this public repository.
+
+Please note that while this method may reduce the risk of detection via hash matching, it does not guarantee protection against all forms of detection or potential consequences of using custom skins. Always inform your users about the risks involved in using custom skins or any modifications to the game client.
+
 ## Donation
 
 If you find this project helpful, consider supporting the maintainers:
