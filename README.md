@@ -64,7 +64,7 @@ To get champion and skin names, you can use the following Data Dragon API endpoi
    ```
    Replace `<version>` with the current game version and `<champion name>` with the champion's name (e.g., "Annie").
 
-Note: There is currently no known endpoint to retrieve chroma names.
+Note: There is currently no known endpoint to retrieve chroma names based on his .BIN ID. Not because it doesn't exist, but because we didn't searched for it. We encourage you to search and submit an issue with the url. Please notice that it's the BIN ID - the one that matches with the .wad file. We know that in champions.json it has the IDs. 
 
 ## How to Use
 
