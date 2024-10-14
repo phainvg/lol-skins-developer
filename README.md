@@ -35,7 +35,7 @@ You will probably notice that there are more .fantome files in each champion fol
 
 For example:
 - A champion might have a skin with ID 3 that has 6 chromas.
-- Logically, the next skin ID should be 9 (3 + 6), but it might actually be 4.
+- Logically, the next skin ID should be 10 (3 + 6 + 1), but it might actually be 4.
 
 To better understand the relationship between these files and the actual skins/chromas:
 
