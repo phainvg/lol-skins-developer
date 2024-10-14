@@ -26,28 +26,6 @@ The repository is organized as follows:
 └── README.md
 ```
 
-> [!IMPORTANT]\
-> You will probably notice that there are more .fantome files in each champion folder than the actual number of skins for that champion. This is because the files include both skins and chromas, which we currently cannot reliably differentiate from which skin the chromas is.
-
-The reasons for this are:
-
-1. Riot Games does not follow a consistent pattern in assigning IDs to skins and chromas.
-2. The gap between skin IDs is not uniform and cannot be used to reliably identify chromas colors or from which skin they are.
-
-For example:
-- A champion might have a skin with ID 3 that has 6 chromas.
-- Logically, the next skin ID should be 10 (3 + 6 + 1), but it might actually be 4.
-
-To better understand the relationship between these files and the actual skins/chromas:
-
-1. Refer to the `API Endpoints` section below to learn how to retrieve official skin names.
-2. Use these endpoints to cross-reference the .fantome files with the official skin data.
-3. Be aware that some .fantome files may represent chromas, even if they're numbered sequentially.
-
-We are continuously working on improving the organization and identification of skins and chromas. Your patience and contributions to this effort are greatly appreciated.
-
-Each champion folder is named with its key (matching the "key" attribute from the champion data), and skin files within are numbered from 0 to n, where n is the last skin for that champion.
-
 ## Injecting
 
 You can use cslol-tools to inject the file into the client. There's a compiled version here:
@@ -84,19 +62,16 @@ Key points to remember:
 
 To get champion and skin names, you can use the following Data Dragon API endpoints:
 
-1. Champion Data (including keys):
+1. Champion Data:
    ```
-   https://ddragon.leagueoflegends.com/cdn/<version>/data/en_US/champion.json
+   https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-summary.json
    ```
-   Replace `<version>` with the current game version (e.g., "14.20.1").
 
-2. Skin Names for a Specific Champion:
+2. Skins and chromas ID for a Specific Champion:
    ```
-   https://ddragon.leagueoflegends.com/cdn/<version>/data/en_US/champion/<champion name>.json
+   "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champions/{champion_id}.json"
    ```
-   Replace `<version>` with the current game version and `<champion name>` with the champion's name (e.g., "Annie").
-
-Note: There is currently no known endpoint to retrieve chroma names based on his .BIN ID. Not because it doesn't exist, but because we didn't searched for it. We encourage you to search and submit an issue with the url. Please notice that it's the BIN ID - the one that matches with the .wad file. We know that in champions.json it has the IDs. 
+  
 
 ## How to Use
 
