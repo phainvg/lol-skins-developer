@@ -26,9 +26,10 @@ The repository is organized as follows:
 └── README.md
 ```
 
-> Important note
+> [!IMPORTANT]\
+> You will probably notice that there are more .fantome files in each champion folder than the actual number of skins for that champion. This is because the files include both skins and chromas, which we currently cannot reliably differentiate from which skin the chromas is.
 
-You will probably notice that there are more .fantome files in each champion folder than the actual number of skins for that champion. This is because the files include both skins and chromas, which we currently cannot reliably differentiate from which skin the chromas is. The reasons for this are:
+The reasons for this are:
 
 1. Riot Games does not follow a consistent pattern in assigning IDs to skins and chromas.
 2. The gap between skin IDs is not uniform and cannot be used to reliably identify chromas colors or from which skin they are.
@@ -100,7 +101,8 @@ This repository is not affiliated with the moderators of r/LoLCustom.
 
 ## Security Considerations for Developers
 
-**Important**: Developers utilizing this repository should be aware of potential risks associated with direct use of these files. To mitigate the risk of Riot Games identifying and potentially blacklisting specific file hashes, we strongly recommend implementing a tool or process to alter the hash of each injection before use. This practice can help prevent easy detection and blacklisting of the files provided here.
+> [!WARNING]\
+> Developers utilizing this repository should be aware of potential risks associated with direct use of these files. To mitigate the risk of Riot Games identifying and potentially blacklisting specific file hashes, we strongly recommend implementing a tool or process to alter the hash of each injection before use. This practice can help prevent easy detection and blacklisting of the files provided here.
 
 Consider developing or using a tool that:
 1. Reads the .fantome files from this repository
