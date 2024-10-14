@@ -1,11 +1,6 @@
+# League of Legends Skins for Developer Repository
 
-# League of Legends Skins Database
-
-> **If any skin crash / doesn't start your game, PLEASE, submit an issue to this repository. There's too many skins and we're not capable of testing everything.**
-
-This repository aims to provide a centralized and easily accessible location for all in-game skins available for League of Legends. The skins are offered in formats compatible with custom skin applications.
-
-The purpose of this project is not to undermine the custom skin scene within League of Legends. Instead, we aim to provide a solution for players who have been unable to afford skins since the introduction of Vanguard. Previously, these players relied on tools like LolSkin or R3nzSkin, which are no longer viable.
+This repository aims to provide a centralized and easily accessible location for all in-game skins available for League of Legends. The purpose of this project is not to undermine the custom skin scene within League of Legends. Instead, we aim to provide a solution for players who have been unable to afford skins since the introduction of Vanguard. Previously, these players relied on tools like LolSkin or R3nzSkin, which are no longer viable.
 
 Using custom skins does not confer any competitive advantage, as they are only visible to the player utilizing them. 
 
@@ -13,27 +8,99 @@ The creator of this repository believes that with the implementation of predator
 
 > We hold that gaming culture should be inclusive and accessible, not just a privilege for those who can afford it.
 
-## Wanna contribute?
-You can simply contribute by ⭐ starring this repository. 
+## Repository Structure
 
-But, if you want to go a little further, you can start by checking our [contribute](CONTRIBUTING.md) page.
+The repository is organized as follows:
+
+```
+/
+├── 1/  # Annie
+│   ├── 0.fantome  # Default skin
+│   ├── 1.fantome 
+│   ├── 2.fantome
+│   └── ...
+├── 2/  # Olaf
+│   ├── 0.fantome # Default skin
+│   ├── 1.fantome
+│   └── ...
+└── README.md
+```
+
+> Important note
+
+You will probably notice that there are more .fantome files in each champion folder than the actual number of skins for that champion. This is because the files include both skins and chromas, which we currently cannot reliably differentiate from which skin the chromas is. The reasons for this are:
+
+1. Riot Games does not follow a consistent pattern in assigning IDs to skins and chromas.
+2. The gap between skin IDs is not uniform and cannot be used to reliably identify chromas colors or from which skin they're.
+
+For example:
+- A champion might have a skin with ID 3 that has 6 chromas.
+- Logically, the next skin ID should be 9 (3 + 6), but it might actually be 4.
+
+To better understand the relationship between these files and the actual skins/chromas:
+
+1. Refer to the `API Endpoints` section below to learn how to retrieve official skin names.
+2. Use these endpoints to cross-reference the .fantome files with the official skin data.
+3. Be aware that some .fantome files may represent chromas, even if they're numbered sequentially.
+
+We are continuously working on improving the organization and identification of skins and chromas. Your patience and contributions to this effort are greatly appreciated.
+
+Each champion folder is named with its key (matching the "key" attribute from the champion data), and skin files within are numbered from 0 to n, where n is the last skin for that champion.
+
+## API Endpoints
+
+To get champion and skin names, you can use the following Data Dragon API endpoints:
+
+1. Champion Data (including keys):
+   ```
+   https://ddragon.leagueoflegends.com/cdn/<version>/data/en_US/champion.json
+   ```
+   Replace `<version>` with the current game version (e.g., "14.20.1").
+
+2. Skin Names for a Specific Champion:
+   ```
+   https://ddragon.leagueoflegends.com/cdn/<version>/data/en_US/champion/<champion name>.json
+   ```
+   Replace `<version>` with the current game version and `<champion name>` with the champion's name (e.g., "Annie").
+
+Note: There is currently no known endpoint to retrieve chroma names.
 
 ## How to Use
 
-To use a skin in-game, simply download your desired skin from this repository. You can then apply it using of the following tool:
+1. Identify the champion key you're interested in using the champion data endpoint.
+2. Navigate to the corresponding folder in this repository (e.g., `/1/` for Annie).
+3. Download the desired skin file (e.g., `1.fantome` for the first skin).
+4. Use the skin data endpoint to find the corresponding skin name if needed.
+5. Apply the skin using a compatible tool such as:
+   - [Fantome](https://github.com/LeagueToolkit/fantome)
+   - [CSLOL](https://github.com/LeagueToolkit/cslol-manager)
 
-- [CSLOL](https://github.com/LeagueToolkit/cslol-manager)
-- [Fantome](https://github.com/LeagueToolkit/fantome)
+Follow the installation instructions provided with these tools to implement the skins successfully.
 
-Follow the installation instructions provided with these tools to successfully implement the skins.
+## Wanna contribute?
 
-## Donation
+You can simply contribute by ⭐ starring this repository. 
 
-Pix: b2763e55-ac97-4963-83e9-d9827caed2de
+But, if you want to go a little further, you can:
 
-Ko-Fi: https://ko-fi.com/koobzaar
+1. Fork this repository.
+2. Add or update the Fantome files in the appropriate champion folder.
+3. Ensure the file naming convention (using sequential numbers) is followed.
+4. Submit a pull request with a clear description of your changes.
+
+For more details, check our [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 ## Disclaimer
 
-This project is not endorsed by Riot Games and does not represent the views or opinions of Riot Games or any of its affiliates. Riot Games and all related properties are trademarks or registered trademarks of Riot Games, Inc. Additionally, this repository is not affiliated with the moderators of r/LoLCustom.
+This project is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or any of its affiliates. League of Legends and all related properties are trademarks or registered trademarks of Riot Games, Inc.
 
+The use of these assets for skin hack development may violate Riot Games' terms of service. Use at your own risk.
+
+This repository is not affiliated with the moderators of r/LoLCustom.
+
+## Donation
+
+If you find this project helpful, consider supporting the maintainers:
+
+- Pix: b2763e55-ac97-4963-83e9-d9827caed2de
+- Ko-Fi: https://ko-fi.com/koobzaar
