@@ -106,10 +106,6 @@ The use of these assets for skin hack development may violate Riot Games' terms 
 
 This repository is not affiliated with the moderators of r/LoLCustom.
 
-## Security Considerations for Developers
-
-> [!WARNING]\
-> Developers utilizing this repository should be aware of potential risks associated with direct use of these files. To mitigate the risk of Riot Games identifying and potentially blacklisting specific file hashes, we strongly recommend implementing a tool or process to alter the .wad.client file hash before every injection. This practice can help prevent easy detection and blacklisting of the files provided here.
 
 Consider developing or using a tool that:
 1. Reads the .fantome files from this repository
