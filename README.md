@@ -52,18 +52,6 @@ To get champion and skin names, you can use the following Data Dragon API endpoi
    ```
   
 
-## How to Use
-
-1. Identify the champion key you're interested in using the champion data endpoint.
-2. Navigate to the corresponding folder in this repository (e.g., `/1/` for Annie).
-3. Download the desired skin file (e.g., `1.fantome` for the first skin).
-4. Use the skin data endpoint to find the corresponding skin name if needed.
-5. Apply the skin using a compatible tool such as:
-   - [Fantome](https://github.com/LeagueToolkit/fantome)
-   - [CSLOL](https://github.com/LeagueToolkit/cslol-manager)
-
-Follow the installation instructions provided with these tools to implement the skins successfully.
-
 ## Wanna contribute?
 
 You can simply contribute by ⭐ starring this repository. 
