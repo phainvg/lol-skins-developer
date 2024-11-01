@@ -26,27 +26,6 @@ The repository is organized as follows:
 └── README.md
 ```
 
-## Injecting
-
-You can use cslol-tools to inject the file into the client. There's a compiled version here:
-https://github.com/LeagueToolkit/cslol-manager/releases
-
-## .fantome File Structure
-
-Understanding the internal structure of a .fantome file is crucial for proper mod creation:
-
-```
-ModName.fantome
-├── RAW/           # For porting legacy mods - avoid for new mods
-│   └── (Legacy mod files, if any)
-├── WAD/           # Main folder for mod files, mirrors LoL's structure
-│   ├── DATA/      # Game data files
-│   ├── Assets/    # Asset files (textures, models, etc.)
-│   └── (Other LoL directories as needed)
-└── META/          # Mod metadata
-    ├── info.json  # Required: Contains mod info (name, author, version, etc.)
-    └── image.png  # Optional: Preview image for the mod
-```
 
 Key points to remember:
 
