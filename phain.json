@@ -1,5 +1,5 @@
 {
-  "name": "SteamRip",
+  "name": "Phain SteamRip",
   "downloads": [
     {
       "title": "UNCHARTED: Legacy of Thieves Collection (v1.3.20900)",
@@ -7,6 +7,14 @@
       "fileSize": "78.0 GB",
       "uris": [
         "https://gofile.io/d/BGXnaB"
+      ]
+    },
+    {
+     "title": "Red Dead Redemption 2 (Build 1491.50)",
+     "uploadDate": "2025-06-07T23:28:20+00:00",
+     "fileSize": "122.0 GB",
+     "uris": [
+       "https://gofile.io/d/OYh1ER"
       ]
     }
   ]
